@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+}
+
+.scrollbar-none {
+    scrollbar-width: none;
+}
+
+.colorful-text {
+    background: linear-gradient(
+        to right,
+        rgb(0, 128, 255),
+        rgb(255, 123, 0),
+        rgb(255, 54, 54),
+        rgb(0, 255, 0),
+        rgb(0, 128, 255)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 600%;
+    animation: change-colors 10s linear infinite alternate;
+}
+
+@keyframes change-colors {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 400% 400%;
+    }
+}
+
+.rubik {
+    font-family: "Rubik";
+}
+
+.SideBar {
+    background-color: hsl(0, 0%, 25%);
+    border-radius: 4px;
+    border-right: 1px solid black;
+}
+
+.edit-i i {
+    height: 40px;
+    width: 40px;
+}
+
+.sidebar-overlay {
+    background-color: hsla(0, 0%, 46%, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+.dummy-buttons button {
+    outline: 1px solid white;
+    padding-block: 25px;
+    padding-inline: 5px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.dummy-buttons button:hover {
+    background-color: hsl(0, 0%, 80%);
+    color: black;
+}
